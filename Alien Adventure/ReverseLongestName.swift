@@ -9,7 +9,23 @@
 extension Hero {
     
     func reverseLongestName(inventory: [UDItem]) -> String {
-        return ""
+        print(inventory)
+        
+        var longestName: String = ""
+        var numberOfCharsInLongestName: Int = 0
+        
+        if inventory.count > 0 {
+            for item in inventory {
+                if item.name.characters.count > numberOfCharsInLongestName {
+                    longestName = item.name
+                    numberOfCharsInLongestName = item.name.characters.count
+                }
+            }
+            
+        }
+        
+        return String(longestName.characters.reverse())
+        
     }
     
 }
