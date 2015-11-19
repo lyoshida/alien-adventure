@@ -36,13 +36,15 @@ extension Hero {
         var charNumber = 0
         var commonChar: Character?
         
+        print(chars)
+        
         for (key, value) in chars {
             if value > charNumber {
                 charNumber = value
                 commonChar = key
             }
         }
-        
+        print("return \(commonChar)")
         return commonChar
     }
 }
